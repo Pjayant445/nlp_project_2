@@ -1,4 +1,3 @@
-import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
 def compute_similarity(vec1, vec2):
@@ -6,6 +5,8 @@ def compute_similarity(vec1, vec2):
 
 
 def follower_score(actual, target):
+    if target == 0:
+        return 0
     return 1 - abs(actual - target) / target
 
 
