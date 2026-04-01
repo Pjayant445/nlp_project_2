@@ -1,5 +1,5 @@
 def apply_filters(df, req):
-    
+
     if req.min_engagement:
         df = df[df["engagement"] >= req.min_engagement]
 
